@@ -7,3 +7,34 @@ body {
   text-align: center;
   margin-top: 100px;
 }
+
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.module-btn {
+  cursor: pointer;
+}
+
+.button-card:hover {
+  transform: scale(1.1);
+  transition-duration: 500ms;
+}
+
+.back {
+  background-color: brown;
+}
+
+.front:active {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  backface-visibility: hidden;
+}
+
+.container {
+  max-width: 100%;
+}
