@@ -1,4 +1,5 @@
 const characterBuilder = (array) => {
+  document.querySelector('#main').innerHTML = '';
   document.querySelector('#main').innerHTML = `
   <div class="container d-flex justify-content-center">
       <nav aria-label="Page navigation example" class="pagination pagination-centered">
