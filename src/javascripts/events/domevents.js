@@ -1,4 +1,6 @@
+import bookChapterBuilder from '../components/forms/bookChapterBuilder';
 import characterBuilder from '../components/forms/characterBuilder';
+import { getBookChapter, getSingleBook } from '../helpers/data/bookData';
 import getCharacter from '../helpers/data/characterData';
 
 const domEvents = () => {
@@ -33,6 +35,11 @@ const domEvents = () => {
     }
     if (e.target.id.includes('ten')) {
       getCharacter(10).then((characterObject) => characterBuilder(characterObject));
+    }
+    if (e.target.id.includes('view-book')) {
+      const id = e.target.id.split('--')[1];
+      getSingleBook(id).then(getBookChapter(id).then((chapter) => bookChapterBuilder(chapter)));
+      // getBookChapter(id).then((chapter) => bookChapterBuilder(chapter));
     }
   });
 };
