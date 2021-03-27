@@ -11,6 +11,9 @@ const navBuilder = () => {
           <a class="nav-link" href="#" id="characters">Characters <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="#" id="movies">Movies</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#" id="books">Books</a>
         </li>
       </ul>
